@@ -1,0 +1,29 @@
+//
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//
+#include "types.h"
+
+//
+#include "const.h"
+
+//
+#include "file.h"
+
+//
+#include "enc.h"
+
+//
+int main(int argc, char **argv)
+{
+  //
+  if (argc < 4)
+    return printf("Usage: %s [input file] [input key file] [output file]\n", argv[0]), 2;
+
+  //
+  xor_cipher(argv[1], argv[2], argv[3]);
+  
+  return 0;
+}
